@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Agregar Producto</h2>
+<form action="{{ url_for('create') }}" method="post">
+    <label for="descripcion">Descripción:</label>
+    <input type="text" name="descripcion" id="descripcion" class="form-control">
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" name="cantidad" id="cantidad" class="form-control">
+    <label for="precio">Precio:</label>
+    <input type="number" name="precio" id="precio" class="form-control" step="0.01">
+    <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+</form>
+{% endblock %}
